@@ -6,8 +6,11 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import AppDrawer from './AppDrawer.js';
+import FAB from './FAB.js';
+import { NativeRouter, Route } from 'react-router-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,14 +20,21 @@ const instructions = Platform.select({
 });
 
 type Props = {};
+
+const People = () => <Text>People</Text>;
+const Events = () => <Text>Events</Text>;
+const Home = () => <Text>Home</Text>;
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <NativeRouter>
+        <FAB />
+        <AppDrawer />
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/people" component={People} />
+        <Route exact path="/events" component={Events} />
+      </NativeRouter>
     );
   }
 }
