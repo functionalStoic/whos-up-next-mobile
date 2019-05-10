@@ -12,7 +12,7 @@
     "graphql-tag": "2.10.1",
     "react": "16.8.6",
     "react-apollo": "2.5.5",
-    "react-native": "0.59.0-rc.3",
+    "react-native": "0.59.8",
     "react-native-paper": "2.15.2",
     "react-native-vector-icons": "6.4.2",
     "react-router-native": "5.0.0",
