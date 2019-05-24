@@ -94,6 +94,14 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
+    signingConfigs {
+        developer {
+            storeFile file('/Users/jasonsooter/dev-space/whos-up-next-mobile/android/keystores/debug.keystore.properties')
+            storePassword 'sBPpCwXXnnwMrXhh94Uy'
+            keyAlias = 'key0'
+            keyPassword 'cvgHfzMwKTDKPQ3XGF9k'
+        }
+    }
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     compileOptions {
@@ -120,8 +128,10 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.developer
         }
     }
+    buildToolsVersion = '28.0.3'
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->

@@ -1,35 +1,40 @@
-import * as React from 'react';
-import { FAB, Portal } from 'react-native-paper';
+import React, { useState } from 'react';
+import { FAB, Portal, Modal } from 'react-native-paper';
+import CreatePerson from './CreatePerson';
 
-export default class MyComponent extends React.Component {
-  state = {
-    open: false,
-  };
+export default function MyFAB() {
+  const [open, setOpen] = useState(false);
+  const [openCreatePerson, setOpenCreatePerson] = useState(false);
 
-  render() {
-    return (
+  return (
+    <Portal>
       <FAB.Group
-        open={this.state.open}
-        icon={this.state.open ? 'close' : 'add'}
+        fabStyle={{ zIndex: 999 }}
+        open={open}
+        icon={open ? 'close' : 'add'}
         actions={[
           {
             icon: 'event',
-            label: 'Event',
+            label: 'Add Event',
             onPress: () => console.log('Pressed notifications'),
           },
           {
             icon: 'people',
-            label: 'People',
-            onPress: () => console.log('Pressed email'),
+            label: 'Add People',
+            onPress: () => setOpenCreatePerson(true),
           },
         ]}
-        onStateChange={({ open }) => this.setState({ open })}
+        onStateChange={({ open }) => setOpen(open)}
         onPress={() => {
-          if (this.state.open) {
+          if (open) {
             // do something if the speed dial is open
           }
         }}
       />
-    );
-  }
+      <CreatePerson
+        open={openCreatePerson}
+        handleClose={() => setOpenCreatePerson(false)}
+      />
+    </Portal>
+  );
 }

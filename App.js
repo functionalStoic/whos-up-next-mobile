@@ -12,6 +12,8 @@ import AppDrawer from './AppDrawer.js';
 import FAB from './FAB.js';
 import { NativeRouter, Route } from 'react-router-native';
 import Home from './Home';
+import People from './People';
+import Events from './Events';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,9 +23,6 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-
-const People = () => <Text>People</Text>;
-const Events = () => <Text>Events</Text>;
 
 export default class App extends Component<Props> {
   render() {
