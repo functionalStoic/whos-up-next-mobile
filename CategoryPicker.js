@@ -16,7 +16,6 @@ const CATEGORY_QUERY = gql`
 export default function CategoryPicker({ handleChange }) {
   const [pickerValue, setPickerValue] = useState();
   const { loading, data, error } = useQuery(CATEGORY_QUERY);
-  console.log('data', data);
   if (loading || error) return null;
   return (
     <Picker

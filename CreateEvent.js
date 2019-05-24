@@ -48,11 +48,9 @@ function CreateEvent({ open, handleClose, history }) {
           }}
           validationSchema={formSchema}
           onSubmit={(values, formikActions) => {
-            console.log('values', values);
             createEvent({
               variables: { ...values, people: [{ id: values.people }] },
             });
-            console.log('history', history);
             handleClose();
             history.push('/events');
           }}
