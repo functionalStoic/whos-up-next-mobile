@@ -22,21 +22,16 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <NativeRouter>
-        <FAB />
-        <AppDrawer />
-
-        <Route exact path="/" component={Home} />
-        <Route exact path="/people" component={People} />
-        <Route exact path="/events" component={Events} />
-      </NativeRouter>
-    );
-  }
+export default function App() {
+  return (
+    <NativeRouter>
+      <FAB />
+      <AppDrawer />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/people" component={People} />
+      <Route exact path="/events" component={Events} />
+    </NativeRouter>
+  );
 }
 
 const styles = StyleSheet.create({
