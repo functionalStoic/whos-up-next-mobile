@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { FAB, Portal, Modal } from 'react-native-paper';
 import CreatePerson from './CreatePerson';
+import CreateEvent from './CreateEvent';
+import { withRouter } from 'react-router';
 
-export default function MyFAB() {
+function MyFAB({ history }) {
   const [open, setOpen] = useState(false);
   const [openCreatePerson, setOpenCreatePerson] = useState(false);
+  const [openCreateEvent, setOpenCreateEvent] = useState(false);
 
   return (
     <Portal>
@@ -16,7 +19,7 @@ export default function MyFAB() {
           {
             icon: 'event',
             label: 'Add Event',
-            onPress: () => console.log('Pressed notifications'),
+            onPress: () => setOpenCreateEvent(true),
           },
           {
             icon: 'people',
@@ -35,6 +38,13 @@ export default function MyFAB() {
         open={openCreatePerson}
         handleClose={() => setOpenCreatePerson(false)}
       />
+      <CreateEvent
+        open={openCreateEvent}
+        handleClose={() => setOpenCreateEvent(false)}
+        history={history}
+      />
     </Portal>
   );
 }
+
+export default withRouter(MyFAB);
