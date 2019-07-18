@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@apollo/react-common@^0.1.0-beta.8":
-  version "0.1.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.8.tgz#98978b0da1a12b5866655295dc46e8a8eaa33ea2"
-  integrity sha512-iNxF9gxxwe9oeovx8XgqU+2J5cOB3RnoSvIfahW2vhJrxtAahWg0AjTTvhQsnLi5OvIiVyivvU+R7xlj/9C0pg==
+"@apollo/react-common@^0.1.0-beta.9":
+  version "0.1.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@apollo/react-common/-/react-common-0.1.0-beta.9.tgz#33d0a46d049d15e97b2f9f1e9e012c338567c1de"
+  integrity sha512-3/FYW7LilVlhfCkxL26Yglmr1LfWd2z+LEMHvtHF8K54Ejmb8kYglvDfbuAIsGT1f8WagpIkDm7eI1tfTdgNmw==
   dependencies:
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
 
-"@apollo/react-hooks@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.10.tgz#4069fad454c0a77eb09d00242dcd96b3bac7791b"
-  integrity sha512-txwIsFhhK4QvF/L5geh4Mh8d1XRje6It3HL9PEc4N83Q/fgzHMWDlvvbUo1HqZuyPKEbFOH7Hi7LsYJBGev6Sw==
+"@apollo/react-hooks@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@apollo/react-hooks/-/react-hooks-0.1.0-beta.11.tgz#3b12836fb6fd944767757f5c7cb477ba880f6d52"
+  integrity sha512-hcEQWLFLpO2lN6AcXFsO/tK27Ve9+hIpw827fQBCuIbCyy2+e715ZMwrgzY5HCeCvLPY9DcS9I++0etr+f3UXw==
   dependencies:
-    "@apollo/react-common" "^0.1.0-beta.8"
-    apollo-utilities "^1.3.2"
+    "@apollo/react-common" "^0.1.0-beta.9"
+    "@wry/equality" "^0.1.9"
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
 
@@ -1115,6 +1115,13 @@
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@wry/equality/-/equality-0.1.2.tgz#c2c4d4faf5850336714bd03e5c48770be92c3374"
   integrity sha512-t5xGmz9dKzMcE+2BxRmABY+Zuy1oNZDyoHTVgQmJ5Q3MTQ23Lnah2TPht+0Lwm0M19Mxh5kaD3b0Nij2PK0S2Q==
+  dependencies:
+    tslib "^1.9.3"
+
+"@wry/equality@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@wry/equality/-/equality-0.1.9.tgz#b13e18b7a8053c6858aa6c85b54911fb31e3a909"
+  integrity sha512-mB6ceGjpMGz1ZTza8HYnrPGos2mC6So4NhS1PtZ8s4Qt0K7fBiIGhpSxUbQmhwcSWE3no+bYxmI2OL6KuXYmoQ==
   dependencies:
     tslib "^1.9.3"
 
