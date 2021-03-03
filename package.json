@@ -26,7 +26,7 @@
     "@babel/runtime": "7.12.5",
     "babel-jest": "24.9.0",
     "jest": "24.9.0",
-    "metro-react-native-babel-preset": "0.57.0",
+    "metro-react-native-babel-preset": "0.65.2",
     "react-test-renderer": "16.11.0"
   },
   "jest": {
